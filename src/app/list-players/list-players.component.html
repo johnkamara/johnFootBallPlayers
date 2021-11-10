@@ -1,0 +1,114 @@
+<fieldset>
+    <h4  style="text-align:center;">{{playerL}}</h4>
+    <fieldset>
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+            <form (ngSubmit)="onSubmit()" #f="ngForm">
+            <div class="row g-3">
+                <div class="col-sm-7">
+                    <label for="name" class="form-label">Name</label>
+                  <input type="text"
+                   class="form-control"
+                   placeholder="name"
+                    id="name"
+                  ngModel
+                  name="name"
+                  #name="ngModel"
+                  required>
+                  <span class="help-block" *ngIf="!name.valid && name.touched">Please enter the name</span>
+                </div>
+                <div class="col-sm">
+                  <label for="origin" class="form-label">Origin</label>
+                  <input type="text"
+                  class="form-control"
+                  id="origin"
+                  ngModel
+                  name="origin"
+                  #orig="ngModel"
+                  required>
+                  <span class="help-block" *ngIf="!orig.valid && orig.touched">Please enter the origin</span>
+                </div>
+                <div class="col-sm">
+                <label for="age" class="form-label">Age</label>
+                  <input type="text"
+                  class="form-control"
+                  placeholder="age"
+                  id="age"
+                  ngModel
+                  name="age"
+                  #age="ngModel"
+                  required>
+                  <span class="help-block" *ngIf="!age.valid && age.touched">Provide the age</span>
+                </div>
+            </div>
+            <div class="row g-3">
+                <div class="col-sm-7">
+                    <label for="position" class="form-label">Position</label>
+                  <input type="text"
+                   class="form-control"
+                   placeholder="position"
+                    id="position"
+                  ngModel
+                  name="position"
+                  #position="ngModel"
+                  required>
+                  <span class="help-block" *ngIf="!position.valid && position.touched">Provide the position</span>
+                </div>
+                <div class="col-sm">
+                    <label for="team" class="form-label">Team</label>
+                    <select
+                      id="origin"
+                      class="form-control"
+                      [ngModel]="teamss"
+                      name="team">
+                      <option value="">{{  teamss }}</option>
+                      <option value="">{{  teamss }}</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class="row g-3">
+                <div class="col-sm-7">
+                    <h4>Listed Players: </h4>
+                </div>
+                 <div class="col-sm-4" style="right: 12px;">
+                    <button class="btn btn-primary" type="button"
+                    type="submit"
+                    [disabled]="!f.valid">Search</button>
+                 </div>
+            </div>
+
+            </form>
+        </div>
+     </fieldset>
+     <hr>
+    <fieldset>
+      <div class="row" *ngIf="submitted">
+          <table class="table caption-top">
+            <caption>List of users</caption>
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Origin</th>
+                <th scope="col">Age</th>
+                <th scope="col">Position</th>
+                <th scope="col">Team</th>
+                <th scope="col">Action</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td> {{ user.username }}</td>
+                <td>{{ user.Origin}}</td>
+                <td> {{ user.Age }}</td>
+                <td> {{ user.Position }}</td>
+                <td> {{ user. Team }}</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </fieldset>
+</fieldset>
+

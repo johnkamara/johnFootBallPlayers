@@ -1,0 +1,90 @@
+<h4 style="text-align:center;">{{playerd}}</h4>
+<div class="container">
+  <form action="">
+    <div class="row">
+      <div class="col">
+        <h3>PLAYER DATA</h3>
+        <form>
+          <br>
+          <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" for="name">Name</label>
+            <div class="col-sm-5">
+              <input class="form-control" id="name" type="text">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" for="nationality">Nationality:</label>
+            <div class="col-sm-5">
+              <input class="form-control" id="nationality" type="text">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" for="age">Age</label>
+            <div class="col-sm-5">
+              <input class="form-control" id="age" type="text">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" for="position">Position</label>
+            <div class="col-sm-5">
+              <input class="form-control" id="position" type="text">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown button
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                <li><a class="dropdown-item active" href="">Action</a></li>
+                <li><a class="dropdown-item" href="">Another action</a></li>
+                <li><a class="dropdown-item" href="">Something else here</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="">Separated link</a></li>
+              </ul>
+            </div>
+
+            <div class="col-sm-5">
+              <select
+                ngModel=""
+                class="form-control"
+                id="origin"
+                name="origin">
+                <option value="Madrid">{{  teamss }}</option>
+                <option value="ManUnited">{{  teamss }}</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col">
+        <h3 style="text-align:center;">Photo</h3>
+        <div class="text-center">
+          <img alt="loading" class="rounded" src="assets/img/IMG_20201206_160639.jpg" style="width:100px;height:150px;">
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="container">
+  <form action="">
+    <div class="row g-1 justify-content-between">
+      <div class="col-sm-1">
+        <button class="form-control btn btn-sm btn-primary"
+                type="button">Back
+        </button>
+      </div>
+      <div class="col-sm-1">
+        <button class="form-control btn btn-success"
+                type="button" (click)="saveData()">Save
+        </button>
+      </div>
+      <div class="col-sm-1 justify-content-sm-end">
+        <button class="form-control btn btn-danger"
+                type="button" >Clean
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
