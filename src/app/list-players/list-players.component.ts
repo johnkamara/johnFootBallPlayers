@@ -12,7 +12,7 @@ export class ListPlayersComponent implements OnInit {
   @ViewChild('f', { static: false }) signupForm: NgForm;
   teamss = ['Karene',
     'leone star',
-    'kallon FC'];
+    'kallon FC', 'Osum star FC'];
  answer = '';
 
   suggestUserName() {
